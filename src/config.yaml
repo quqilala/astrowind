@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: OUTGOPRO
+  site: 'https://outgopro.com'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'OUTGOPRO - 走，出海去！'
+    template: '%s — OUTGOPRO'
+  description: "\U0001F680 专注为中国企业和独立开发者提供出海合规、支付、营销的一站式资源导航"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: OUTGOPRO
     images:
       - url: '~/assets/images/default.png'
         width: 1200
