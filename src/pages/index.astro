@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 import Image from '~/components/common/Image.astro';
 
 import heroImage from '~/assets/images/hero-image.png';
-import defaultImage from '~/assets/images/default.png';
 
 const metadata = {
   title: 'OUTGOPRO — 出海增长与合规导航',
@@ -12,12 +11,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="hero-wrap relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
-      <!-- 背景素材恢复：使用项目自带 default 图做柔和背景 -->
-      <Image src={defaultImage} alt="background" class="w-full h-full object-cover" />
-    </div>
-
+  <section class="hero-wrap relative overflow-hidden bg-white">
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-20">
       <div class="flex justify-end mb-6">
         <button
@@ -182,9 +176,7 @@ const metadata = {
 
   <style>
     .hero-wrap {
-      background:
-        radial-gradient(70% 60% at 0% 0%, rgba(59, 130, 246, 0.2), transparent 70%),
-        radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.2), transparent 70%);
+      background: #ffffff;
     }
 
     .card-link {
