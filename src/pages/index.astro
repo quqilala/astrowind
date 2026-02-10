@@ -1,397 +1,132 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-
 const metadata = {
-  title: 'OUTGOPRO — 走，出海去！',
+  title: 'OUTGOPRO — 出海增长与合规导航',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: '开始探索',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: '联系我们', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
-  >
-    <Fragment slot="title">
-      OUTGOPRO <span class="hidden xl:inline"> </span>
-      <span class="text-accent dark:text-white highlight"> 走 - 出海去 </span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold"> </span> 别卷了🌎 </span
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <div class="flex justify-end mb-6">
+      <!-- 中英切换按钮：后面要扩展语言时，直接改 data-lang 即可 -->
+      <button
+        id="lang-toggle"
+        class="px-4 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+        type="button"
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
-      赚全球的钱去！
-    </Fragment>
-  </Hero>
+        EN
+      </button>
+    </div>
 
-  <!-- Note Widget ******************* -->
+    <div class="text-center mb-12 md:mb-16">
+      <h1
+        class="text-4xl md:text-6xl font-bold tracking-tight mb-4"
+        data-i18n="heroTitle"
+      >
+        OUTGOPRO：出海增长与合规实践
+      </h1>
+      <p
+        class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
+        data-i18n="heroDesc"
+      >
+        聚焦 AI 工具与工作流、海外公司/账户设立与报税、网络技术、跨境电商，帮助你更高效地把业务做向全球。
+      </p>
+    </div>
 
-  <Note />
+    <!-- 板块说明：每个版块先放简短描述，后续你可直接扩写内容 -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <article id="ai-tools" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
+        <h2 class="text-2xl font-bold mb-3" data-i18n="aiTitle">AI 工具及工作流</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="aiDesc">
+          精选可落地的 AI 工具与自动化工作流，用最少的人力完成内容生产、客户触达与运营提效。
+        </p>
+      </article>
 
-  <!-- Features Widget *************** -->
+      <article id="global-tax" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
+        <h2 class="text-2xl font-bold mb-3" data-i18n="taxTitle">海外公司/账户设立报税</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="taxDesc">
+          梳理海外主体搭建、银行/支付账户开设与税务申报关键节点，降低合规风险并提升执行效率。
+        </p>
+      </article>
 
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+      <article id="network-tech" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
+        <h2 class="text-2xl font-bold mb-3" data-i18n="netTitle">网络技术</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="netDesc">
+          关注网络架构、稳定性与安全实践，为跨境业务提供可靠的技术底座与可持续扩展能力。
+        </p>
+      </article>
 
-  <!-- Content Widget **************** -->
+      <article id="cross-border" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
+        <h2 class="text-2xl font-bold mb-3" data-i18n="ecomTitle">跨境电商</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="ecomDesc">
+          围绕选品、渠道、投放与履约提供可执行思路，帮助跨境电商业务更快找到增长曲线。
+        </p>
+      </article>
+    </div>
 
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 5.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
+    <section id="about" class="mt-10 rounded-2xl border p-6 md:p-8 bg-white dark:bg-slate-900/40">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="aboutTitle">关于我们</h2>
+      <p class="text-gray-600 dark:text-gray-300" data-i18n="aboutDesc">
+        我们专注于“技术 + 合规 + 商业增长”的交叉场景，持续沉淀实战经验，帮助中国团队更稳更快走向全球市场。
+      </p>
+    </section>
+  </section>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <script is:inline>
+    // 轻量级双语方案：通过 data-i18n 映射替换文本
+    // 后续如果做多页面，可把这段抽到公共组件里复用
+    const dict = {
+      zh: {
+        heroTitle: 'OUTGOPRO：出海增长与合规实践',
+        heroDesc:
+          '聚焦 AI 工具与工作流、海外公司/账户设立与报税、网络技术、跨境电商，帮助你更高效地把业务做向全球。',
+        aiTitle: 'AI 工具及工作流',
+        aiDesc: '精选可落地的 AI 工具与自动化工作流，用最少的人力完成内容生产、客户触达与运营提效。',
+        taxTitle: '海外公司/账户设立报税',
+        taxDesc: '梳理海外主体搭建、银行/支付账户开设与税务申报关键节点，降低合规风险并提升执行效率。',
+        netTitle: '网络技术',
+        netDesc: '关注网络架构、稳定性与安全实践，为跨境业务提供可靠的技术底座与可持续扩展能力。',
+        ecomTitle: '跨境电商',
+        ecomDesc: '围绕选品、渠道、投放与履约提供可执行思路，帮助跨境电商业务更快找到增长曲线。',
+        aboutTitle: '关于我们',
+        aboutDesc: '我们专注于“技术 + 合规 + 商业增长”的交叉场景，持续沉淀实战经验，帮助中国团队更稳更快走向全球市场。',
+      },
+      en: {
+        heroTitle: 'OUTGOPRO: Global Growth & Compliance Playbook',
+        heroDesc:
+          'Focused on AI tools and workflows, overseas company/account setup & tax filing, network technology, and cross-border e-commerce to help your business scale globally.',
+        aiTitle: 'AI Tools & Workflows',
+        aiDesc: 'Practical AI tools and automation workflows to improve content creation, customer operations, and execution efficiency.',
+        taxTitle: 'Overseas Company/Account Setup & Tax Filing',
+        taxDesc: 'Key steps for entity setup, banking/payment accounts, and tax filing to reduce compliance risk and improve operational speed.',
+        netTitle: 'Network Technology',
+        netDesc: 'Network architecture, reliability, and security practices that support stable and scalable global operations.',
+        ecomTitle: 'Cross-border E-commerce',
+        ecomDesc: 'Actionable ideas across product selection, channels, ads, and fulfillment to accelerate growth for global commerce.',
+        aboutTitle: 'About Us',
+        aboutDesc: 'We focus on the intersection of technology, compliance, and business growth, helping Chinese teams expand globally with confidence.',
+      },
+    };
 
-  <!-- Content Widget **************** -->
+    let current = 'zh';
+    const btn = document.getElementById('lang-toggle');
 
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    const render = () => {
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (key && dict[current][key]) el.textContent = dict[current][key];
+      });
+      btn.textContent = current === 'zh' ? 'EN' : '中文';
+      document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
+    };
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+    btn?.addEventListener('click', () => {
+      current = current === 'zh' ? 'en' : 'zh';
+      render();
+    });
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+    render();
+  </script>
 </Layout>
