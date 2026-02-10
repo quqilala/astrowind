@@ -1,5 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Image from '~/components/common/Image.astro';
+
+import heroImage from '~/assets/images/hero-image.png';
+import defaultImage from '~/assets/images/default.png';
 
 const metadata = {
   title: 'OUTGOPRO — 出海增长与合规导航',
@@ -8,125 +12,200 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
-    <div class="flex justify-end mb-6">
-      <!-- 中英切换按钮：后面要扩展语言时，直接改 data-lang 即可 -->
-      <button
-        id="lang-toggle"
-        class="px-4 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
-        type="button"
-      >
-        EN
-      </button>
+  <section class="hero-wrap relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
+      <!-- 背景素材恢复：使用项目自带 default 图做柔和背景 -->
+      <Image src={defaultImage} alt="background" class="w-full h-full object-cover" />
     </div>
 
-    <div class="text-center mb-12 md:mb-16">
-      <h1
-        class="text-4xl md:text-6xl font-bold tracking-tight mb-4"
-        data-i18n="heroTitle"
-      >
-        OUTGOPRO：出海增长与合规实践
-      </h1>
-      <p
-        class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
-        data-i18n="heroDesc"
-      >
-        聚焦 AI 工具与工作流、海外公司/账户设立与报税、网络技术、跨境电商，帮助你更高效地把业务做向全球。
-      </p>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+      <div class="flex justify-end mb-6">
+        <button
+          id="lang-toggle"
+          class="px-4 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-slate-900/70 hover:bg-gray-100 dark:hover:bg-gray-800"
+          type="button"
+        >
+          EN
+        </button>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-block text-xs tracking-widest font-bold uppercase rounded-full px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200 mb-4">
+            OUTGOPRO
+          </p>
+
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5" data-i18n="heroTitle">
+            出海，不靠拍脑袋；靠方法、工具与执行。
+          </h1>
+
+          <p class="text-lg text-gray-600 dark:text-gray-300 mb-7" data-i18n="heroDesc">
+            我们围绕 AI 工作流、海外设立与税务合规、网络技术和跨境电商，给你可落地的增长路线图。
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <a href="/ai-tools" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700" data-i18n="heroBtn1">查看服务模块</a>
+            <a href="/about-us" class="px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="heroBtn2">联系我们</a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <!-- 背景素材恢复：使用项目原有 hero-image -->
+          <Image src={heroImage} alt="Outgopro Hero" class="w-full rounded-2xl shadow-2xl border border-white/30" />
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- 板块说明：每个版块先放简短描述，后续你可直接扩写内容 -->
-    <div class="grid gap-6 md:grid-cols-2">
-      <article id="ai-tools" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
-        <h2 class="text-2xl font-bold mb-3" data-i18n="aiTitle">AI 工具及工作流</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="aiDesc">
-          精选可落地的 AI 工具与自动化工作流，用最少的人力完成内容生产、客户触达与运营提效。
-        </p>
-      </article>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <a href="/ai-tools" class="card-link" aria-label="AI tools page">
+        <h2 class="text-xl font-bold mb-2" data-i18n="aiTitle">AI工具及工作流</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="aiDesc">聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。</p>
+      </a>
 
-      <article id="global-tax" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
-        <h2 class="text-2xl font-bold mb-3" data-i18n="taxTitle">海外公司/账户设立报税</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="taxDesc">
-          梳理海外主体搭建、银行/支付账户开设与税务申报关键节点，降低合规风险并提升执行效率。
-        </p>
-      </article>
+      <a href="/global-tax" class="card-link" aria-label="global setup and tax page">
+        <h2 class="text-xl font-bold mb-2" data-i18n="taxTitle">海外公司/账户设立报税</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="taxDesc">覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。</p>
+      </a>
 
-      <article id="network-tech" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
-        <h2 class="text-2xl font-bold mb-3" data-i18n="netTitle">网络技术</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="netDesc">
-          关注网络架构、稳定性与安全实践，为跨境业务提供可靠的技术底座与可持续扩展能力。
-        </p>
-      </article>
+      <a href="/network-tech" class="card-link" aria-label="network tech page">
+        <h2 class="text-xl font-bold mb-2" data-i18n="netTitle">网络技术</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="netDesc">关注网络架构、稳定性与安全，打稳跨境业务技术底座。</p>
+      </a>
 
-      <article id="cross-border" class="rounded-2xl border p-6 bg-white dark:bg-slate-900/40">
-        <h2 class="text-2xl font-bold mb-3" data-i18n="ecomTitle">跨境电商</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="ecomDesc">
-          围绕选品、渠道、投放与履约提供可执行思路，帮助跨境电商业务更快找到增长曲线。
-        </p>
-      </article>
+      <a href="/cross-border" class="card-link" aria-label="cross border ecommerce page">
+        <h2 class="text-xl font-bold mb-2" data-i18n="ecomTitle">跨境电商</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="ecomDesc">围绕选品、流量与履约，帮助团队找到可持续增长路径。</p>
+      </a>
+
+      <a href="/about-us" class="card-link md:col-span-2 lg:col-span-2" aria-label="about us page">
+        <h2 class="text-xl font-bold mb-2" data-i18n="aboutTitle">关于我们</h2>
+        <p class="text-gray-600 dark:text-gray-300" data-i18n="aboutDesc">我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。</p>
+      </a>
     </div>
-
-    <section id="about" class="mt-10 rounded-2xl border p-6 md:p-8 bg-white dark:bg-slate-900/40">
-      <h2 class="text-2xl md:text-3xl font-bold mb-3" data-i18n="aboutTitle">关于我们</h2>
-      <p class="text-gray-600 dark:text-gray-300" data-i18n="aboutDesc">
-        我们专注于“技术 + 合规 + 商业增长”的交叉场景，持续沉淀实战经验，帮助中国团队更稳更快走向全球市场。
-      </p>
-    </section>
   </section>
 
   <script is:inline>
-    // 轻量级双语方案：通过 data-i18n 映射替换文本
-    // 后续如果做多页面，可把这段抽到公共组件里复用
+    // ===== 双语文案 =====
     const dict = {
       zh: {
-        heroTitle: 'OUTGOPRO：出海增长与合规实践',
-        heroDesc:
-          '聚焦 AI 工具与工作流、海外公司/账户设立与报税、网络技术、跨境电商，帮助你更高效地把业务做向全球。',
-        aiTitle: 'AI 工具及工作流',
-        aiDesc: '精选可落地的 AI 工具与自动化工作流，用最少的人力完成内容生产、客户触达与运营提效。',
+        heroTitle: '出海，不靠拍脑袋；靠方法、工具与执行。',
+        heroDesc: '我们围绕 AI 工作流、海外设立与税务合规、网络技术和跨境电商，给你可落地的增长路线图。',
+        heroBtn1: '查看服务模块',
+        heroBtn2: '联系我们',
+        aiTitle: 'AI工具及工作流',
+        aiDesc: '聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。',
         taxTitle: '海外公司/账户设立报税',
-        taxDesc: '梳理海外主体搭建、银行/支付账户开设与税务申报关键节点，降低合规风险并提升执行效率。',
+        taxDesc: '覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。',
         netTitle: '网络技术',
-        netDesc: '关注网络架构、稳定性与安全实践，为跨境业务提供可靠的技术底座与可持续扩展能力。',
+        netDesc: '关注网络架构、稳定性与安全，打稳跨境业务技术底座。',
         ecomTitle: '跨境电商',
-        ecomDesc: '围绕选品、渠道、投放与履约提供可执行思路，帮助跨境电商业务更快找到增长曲线。',
+        ecomDesc: '围绕选品、流量与履约，帮助团队找到可持续增长路径。',
         aboutTitle: '关于我们',
-        aboutDesc: '我们专注于“技术 + 合规 + 商业增长”的交叉场景，持续沉淀实战经验，帮助中国团队更稳更快走向全球市场。',
+        aboutDesc: '我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。',
       },
       en: {
-        heroTitle: 'OUTGOPRO: Global Growth & Compliance Playbook',
-        heroDesc:
-          'Focused on AI tools and workflows, overseas company/account setup & tax filing, network technology, and cross-border e-commerce to help your business scale globally.',
+        heroTitle: 'Global expansion needs methods, tools, and execution — not guesswork.',
+        heroDesc: 'We deliver practical playbooks across AI workflows, overseas setup and tax compliance, network technology, and cross-border e-commerce.',
+        heroBtn1: 'Explore Services',
+        heroBtn2: 'Contact Us',
         aiTitle: 'AI Tools & Workflows',
-        aiDesc: 'Practical AI tools and automation workflows to improve content creation, customer operations, and execution efficiency.',
-        taxTitle: 'Overseas Company/Account Setup & Tax Filing',
-        taxDesc: 'Key steps for entity setup, banking/payment accounts, and tax filing to reduce compliance risk and improve operational speed.',
+        aiDesc: 'From content to customer operations, automate intelligently and scale with fewer resources.',
+        taxTitle: 'Overseas Setup & Tax Filing',
+        taxDesc: 'Key guidance for entities, banking/payment setup, and tax filing to reduce compliance risks.',
         netTitle: 'Network Technology',
-        netDesc: 'Network architecture, reliability, and security practices that support stable and scalable global operations.',
+        netDesc: 'Architecture, reliability, and security practices for stable global operations.',
         ecomTitle: 'Cross-border E-commerce',
-        ecomDesc: 'Actionable ideas across product selection, channels, ads, and fulfillment to accelerate growth for global commerce.',
+        ecomDesc: 'Actionable ideas in product, traffic, and fulfillment for sustainable growth.',
         aboutTitle: 'About Us',
-        aboutDesc: 'We focus on the intersection of technology, compliance, and business growth, helping Chinese teams expand globally with confidence.',
+        aboutDesc: 'We focus on the intersection of technology, compliance, and growth with practical execution.',
       },
     };
 
-    let current = 'zh';
+    // ===== 顶部导航双语联动（你要求的点2） =====
+    const navDict = {
+      zh: {
+        '/ai-tools': 'AI工具及工作流',
+        '/global-tax': '海外公司/账户设立报税',
+        '/network-tech': '网络技术',
+        '/cross-border': '跨境电商',
+        '/about-us': '关于我们',
+      },
+      en: {
+        '/ai-tools': 'AI Tools',
+        '/global-tax': 'Global Setup & Tax',
+        '/network-tech': 'Network Tech',
+        '/cross-border': 'Cross-border E-commerce',
+        '/about-us': 'About Us',
+      },
+    };
+
+    let current = localStorage.getItem('outgopro-lang') || 'zh';
     const btn = document.getElementById('lang-toggle');
 
-    const render = () => {
+    const normalizePath = (href) => {
+      try {
+        const u = new URL(href, window.location.origin);
+        return u.pathname.replace(/\/$/, '') || '/';
+      } catch {
+        return href;
+      }
+    };
+
+    const renderNav = () => {
+      const links = document.querySelectorAll('header a[href]');
+      links.forEach((a) => {
+        const path = normalizePath(a.getAttribute('href') || '');
+        if (navDict[current][path]) a.textContent = navDict[current][path];
+      });
+    };
+
+    const renderPage = () => {
       document.querySelectorAll('[data-i18n]').forEach((el) => {
         const key = el.getAttribute('data-i18n');
         if (key && dict[current][key]) el.textContent = dict[current][key];
       });
       btn.textContent = current === 'zh' ? 'EN' : '中文';
       document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
+      renderNav();
+      localStorage.setItem('outgopro-lang', current);
     };
 
     btn?.addEventListener('click', () => {
       current = current === 'zh' ? 'en' : 'zh';
-      render();
+      renderPage();
     });
 
-    render();
+    renderPage();
   </script>
+
+  <style>
+    .hero-wrap {
+      background:
+        radial-gradient(70% 60% at 0% 0%, rgba(59, 130, 246, 0.2), transparent 70%),
+        radial-gradient(60% 50% at 100% 0%, rgba(168, 85, 247, 0.2), transparent 70%);
+    }
+
+    .card-link {
+      display: block;
+      border-radius: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.25rem;
+      background: rgba(255, 255, 255, 0.85);
+      transition: all 0.2s ease;
+      backdrop-filter: blur(3px);
+    }
+
+    :global(.dark) .card-link {
+      background: rgba(15, 23, 42, 0.45);
+      border-color: rgba(71, 85, 105, 0.5);
+    }
+
+    .card-link:hover {
+      transform: translateY(-3px);
+      border-color: rgba(59, 130, 246, 0.6);
+      box-shadow: 0 12px 32px rgba(2, 6, 23, 0.08);
+    }
+  </style>
 </Layout>
