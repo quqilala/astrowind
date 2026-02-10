@@ -11,7 +11,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="hero-wrap relative overflow-hidden bg-white">
+  <section class="hero-wrap relative overflow-hidden bg-white dark:bg-slate-950">
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-20">
       <div class="flex justify-end mb-6">
         <button
@@ -29,17 +29,17 @@ const metadata = {
             OUTGOPRO
           </p>
 
-          <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5" data-i18n="heroTitle">
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5 text-slate-900 dark:text-white" data-i18n="heroTitle">
             出海，不靠拍脑袋；靠方法、工具与执行。
           </h1>
 
-          <p class="text-lg text-gray-600 dark:text-gray-300 mb-7" data-i18n="heroDesc">
+          <p class="text-lg text-slate-600 dark:text-slate-300 mb-7" data-i18n="heroDesc">
             我们围绕 AI 工作流、海外设立与税务合规、网络技术和跨境电商，给你可落地的增长路线图。
           </p>
 
           <div class="flex flex-wrap gap-3">
             <a href="/ai-tools" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700" data-i18n="heroBtn1">查看服务模块</a>
-            <a href="/about-us" class="px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-700 font-semibold hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="heroBtn2">联系我们</a>
+            <a href="/about-us" class="px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-600 font-semibold text-slate-700 dark:text-slate-100 hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="heroBtn2">联系我们</a>
           </div>
         </div>
 
@@ -54,28 +54,28 @@ const metadata = {
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <a href="/ai-tools" class="card-link" aria-label="AI tools page">
-        <h2 class="text-xl font-bold mb-2" data-i18n="aiTitle">AI工具及工作流</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="aiDesc">聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。</p>
+        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="aiTitle">AI工具及工作流</h2>
+        <p class="text-slate-600 dark:text-slate-300" data-i18n="aiDesc">聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。</p>
       </a>
 
       <a href="/global-tax" class="card-link" aria-label="global setup and tax page">
-        <h2 class="text-xl font-bold mb-2" data-i18n="taxTitle">海外公司/账户设立报税</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="taxDesc">覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。</p>
+        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="taxTitle">海外公司/账户设立报税</h2>
+        <p class="text-slate-600 dark:text-slate-300" data-i18n="taxDesc">覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。</p>
       </a>
 
       <a href="/network-tech" class="card-link" aria-label="network tech page">
-        <h2 class="text-xl font-bold mb-2" data-i18n="netTitle">网络技术</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="netDesc">关注网络架构、稳定性与安全，打稳跨境业务技术底座。</p>
+        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="netTitle">网络技术</h2>
+        <p class="text-slate-600 dark:text-slate-300" data-i18n="netDesc">关注网络架构、稳定性与安全，打稳跨境业务技术底座。</p>
       </a>
 
       <a href="/cross-border" class="card-link" aria-label="cross border ecommerce page">
-        <h2 class="text-xl font-bold mb-2" data-i18n="ecomTitle">跨境电商</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="ecomDesc">围绕选品、流量与履约，帮助团队找到可持续增长路径。</p>
+        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="ecomTitle">跨境电商</h2>
+        <p class="text-slate-600 dark:text-slate-300" data-i18n="ecomDesc">围绕选品、流量与履约，帮助团队找到可持续增长路径。</p>
       </a>
 
       <a href="/about-us" class="card-link md:col-span-2 lg:col-span-2" aria-label="about us page">
-        <h2 class="text-xl font-bold mb-2" data-i18n="aboutTitle">关于我们</h2>
-        <p class="text-gray-600 dark:text-gray-300" data-i18n="aboutDesc">我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。</p>
+        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="aboutTitle">关于我们</h2>
+        <p class="text-slate-600 dark:text-slate-300" data-i18n="aboutDesc">我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。</p>
       </a>
     </div>
   </section>
@@ -175,10 +175,6 @@ const metadata = {
   </script>
 
   <style>
-    .hero-wrap {
-      background: #ffffff;
-    }
-
     .card-link {
       display: block;
       border-radius: 1rem;
@@ -190,8 +186,8 @@ const metadata = {
     }
 
     :global(.dark) .card-link {
-      background: rgba(15, 23, 42, 0.45);
-      border-color: rgba(71, 85, 105, 0.5);
+      background: rgba(15, 23, 42, 0.85);
+      border-color: rgba(100, 116, 139, 0.55);
     }
 
     .card-link:hover {
