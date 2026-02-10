@@ -11,113 +11,147 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="hero-wrap relative overflow-hidden bg-white dark:bg-slate-950">
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 md:py-20">
-      <div class="flex justify-end mb-6">
-        <button
-          id="lang-toggle"
-          class="px-4 py-2 text-sm font-semibold rounded-lg border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-slate-900/70 hover:bg-gray-100 dark:hover:bg-gray-800"
-          type="button"
-        >
-          EN
-        </button>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-10 items-center">
+  <!-- ==================== Hero 区 ==================== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/40 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-16 md:pt-12 md:pb-24">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <!-- 左侧文案 -->
         <div>
-          <p class="inline-block text-xs tracking-widest font-bold uppercase rounded-full px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200 mb-4">
-            OUTGOPRO
-          </p>
+          <div class="inline-flex items-center gap-1.5 text-xs tracking-widest font-bold uppercase rounded-full px-3 py-1.5 bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200 mb-5">
+            🚀 OUTGOPRO
+          </div>
 
-          <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5 text-slate-900 dark:text-white" data-i18n="heroTitle">
-            出海，不靠拍脑袋；靠方法、工具与执行。
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold tracking-tight leading-[1.15] mb-5 text-slate-900 dark:text-white" data-i18n="heroTitle">
+            别卷了，去赚全世界的钱。
           </h1>
 
-          <p class="text-lg text-slate-600 dark:text-slate-300 mb-7" data-i18n="heroDesc">
-            我们围绕 AI 工作流、海外设立与税务合规、网络技术和跨境电商，给你可落地的增长路线图。
+          <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mb-8 leading-relaxed max-w-lg" data-i18n="heroDesc">
+            AI 提效、海外开公司报税、搭网络、做跨境电商——我们把踩过的坑铺成路，你直接走就好。
           </p>
 
           <div class="flex flex-wrap gap-3">
-            <a href="/ai-tools" class="px-5 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700" data-i18n="heroBtn1">查看服务模块</a>
-            <a href="/about-us" class="px-5 py-3 rounded-xl border border-gray-300 dark:border-gray-600 font-semibold text-slate-700 dark:text-slate-100 hover:bg-gray-100 dark:hover:bg-gray-800" data-i18n="heroBtn2">联系我们</a>
+            <a href="/ai-tools" class="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors" data-i18n="heroBtn1">
+              开始探索 →
+            </a>
+            <a href="/about-us" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-600 font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" data-i18n="heroBtn2">
+              聊聊合作
+            </a>
           </div>
         </div>
 
+        <!-- 右侧配图 -->
         <div class="relative">
-          <!-- 背景素材恢复：使用项目原有 hero-image -->
-          <Image src={heroImage} alt="Outgopro Hero" class="w-full rounded-2xl shadow-2xl border border-white/30" />
+          <div class="absolute -inset-4 bg-gradient-to-tr from-blue-400/20 to-purple-400/20 dark:from-blue-500/10 dark:to-purple-500/10 rounded-3xl blur-2xl"></div>
+          <Image src={heroImage} alt="Outgopro Hero" class="relative w-full rounded-2xl shadow-2xl" />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <a href="/ai-tools" class="card-link" aria-label="AI tools page">
-        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="aiTitle">AI工具及工作流</h2>
-        <p class="text-slate-600 dark:text-slate-300" data-i18n="aiDesc">聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。</p>
+  <!-- ==================== 业务板块 ==================== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <!-- 板块标题 -->
+    <div class="text-center mb-12">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-3" data-i18n="sectionTitle">我们能帮你做什么？</h2>
+      <p class="text-slate-500 dark:text-slate-400 max-w-xl mx-auto" data-i18n="sectionDesc">五个核心板块，覆盖出海路上最关键的环节。</p>
+    </div>
+
+    <!-- 卡片网格 -->
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- AI 工具 -->
+      <a href="/ai-tools" class="card-link group">
+        <span class="text-3xl mb-3 block">🤖</span>
+        <h3 class="text-lg font-bold mb-1.5 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" data-i18n="aiTitle">AI 工具及工作流</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="aiDesc">让 AI 替你干活，从内容生产到客户触达，用更少的人做更多的事。</p>
       </a>
 
-      <a href="/global-tax" class="card-link" aria-label="global setup and tax page">
-        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="taxTitle">海外公司/账户设立报税</h2>
-        <p class="text-slate-600 dark:text-slate-300" data-i18n="taxDesc">覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。</p>
+      <!-- 海外设立报税 -->
+      <a href="/global-tax" class="card-link group">
+        <span class="text-3xl mb-3 block">🏦</span>
+        <h3 class="text-lg font-bold mb-1.5 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" data-i18n="taxTitle">海外公司 / 账户设立报税</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="taxDesc">开公司、开户、报税一条龙，别让合规问题在最该冲刺的时候绊倒你。</p>
       </a>
 
-      <a href="/network-tech" class="card-link" aria-label="network tech page">
-        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="netTitle">网络技术</h2>
-        <p class="text-slate-600 dark:text-slate-300" data-i18n="netDesc">关注网络架构、稳定性与安全，打稳跨境业务技术底座。</p>
+      <!-- 网络技术 -->
+      <a href="/network-tech" class="card-link group">
+        <span class="text-3xl mb-3 block">🌐</span>
+        <h3 class="text-lg font-bold mb-1.5 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" data-i18n="netTitle">网络技术</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="netDesc">稳定的网络是出海的命根子。架构、安全、加速，一个都不能少。</p>
       </a>
 
-      <a href="/cross-border" class="card-link" aria-label="cross border ecommerce page">
-        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="ecomTitle">跨境电商</h2>
-        <p class="text-slate-600 dark:text-slate-300" data-i18n="ecomDesc">围绕选品、流量与履约，帮助团队找到可持续增长路径。</p>
+      <!-- 跨境电商 -->
+      <a href="/cross-border" class="card-link group">
+        <span class="text-3xl mb-3 block">🛒</span>
+        <h3 class="text-lg font-bold mb-1.5 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" data-i18n="ecomTitle">跨境电商</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="ecomDesc">选品、流量、履约——帮你找到能持续赚钱的增长路径，不靠玄学。</p>
       </a>
 
-      <a href="/about-us" class="card-link md:col-span-2 lg:col-span-2" aria-label="about us page">
-        <h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white" data-i18n="aboutTitle">关于我们</h2>
-        <p class="text-slate-600 dark:text-slate-300" data-i18n="aboutDesc">我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。</p>
+      <!-- 关于我们 -->
+      <a href="/about-us" class="card-link group sm:col-span-2 lg:col-span-2">
+        <span class="text-3xl mb-3 block">✌️</span>
+        <h3 class="text-lg font-bold mb-1.5 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" data-i18n="aboutTitle">关于我们</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="aboutDesc">一群在技术、财税和商业增长交叉路口蹲了很久的人。方法论靠谱，不画饼。</p>
       </a>
     </div>
   </section>
 
+  <!-- ==================== 底部 CTA ==================== -->
+  <section class="bg-slate-50 dark:bg-slate-900/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4" data-i18n="ctaTitle">准备好出海了吗？🌊</h2>
+      <p class="text-slate-500 dark:text-slate-400 mb-8 max-w-lg mx-auto" data-i18n="ctaDesc">不管你是刚起步还是已经在路上，我们都可以聊聊。</p>
+      <a href="/about-us" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors" data-i18n="ctaBtn">联系我们 →</a>
+    </div>
+  </section>
+
+  <!-- ==================== 双语切换逻辑 ==================== -->
   <script is:inline>
-    // ===== 双语文案 =====
     const dict = {
       zh: {
-        heroTitle: '出海，不靠拍脑袋；靠方法、工具与执行。',
-        heroDesc: '我们围绕 AI 工作流、海外设立与税务合规、网络技术和跨境电商，给你可落地的增长路线图。',
-        heroBtn1: '查看服务模块',
-        heroBtn2: '联系我们',
-        aiTitle: 'AI工具及工作流',
-        aiDesc: '聚焦自动化提效，从内容生产到客户触达，用更少的人做更多事。',
-        taxTitle: '海外公司/账户设立报税',
-        taxDesc: '覆盖海外主体、账户开设与税务申报关键节点，降低合规风险。',
-        netTitle: '网络技术',
-        netDesc: '关注网络架构、稳定性与安全，打稳跨境业务技术底座。',
-        ecomTitle: '跨境电商',
-        ecomDesc: '围绕选品、流量与履约，帮助团队找到可持续增长路径。',
-        aboutTitle: '关于我们',
-        aboutDesc: '我们专注“技术 + 合规 + 增长”的交叉实践，做真正能落地的方法论。',
+        heroTitle: '别卷了，去赚全世界的钱。',
+        heroDesc: 'AI 提效、海外开公司报税、搭网络、做跨境电商——我们把踩过的坑铺成路，你直接走就好。',
+        heroBtn1: '开始探索 →',
+        heroBtn2: '聊聊合作',
+        sectionTitle: '我们能帮你做什么？',
+        sectionDesc: '五个核心板块，覆盖出海路上最关键的环节。',
+        aiTitle: '🤖 AI 工具及工作流',
+        aiDesc: '让 AI 替你干活，从内容生产到客户触达，用更少的人做更多的事。',
+        taxTitle: '🏦 海外公司 / 账户设立报税',
+        taxDesc: '开公司、开户、报税一条龙，别让合规问题在最该冲刺的时候绊倒你。',
+        netTitle: '🌐 网络技术',
+        netDesc: '稳定的网络是出海的命根子。架构、安全、加速，一个都不能少。',
+        ecomTitle: '🛒 跨境电商',
+        ecomDesc: '选品、流量、履约——帮你找到能持续赚钱的增长路径，不靠玄学。',
+        aboutTitle: '✌️ 关于我们',
+        aboutDesc: '一群在技术、财税和商业增长交叉路口蹲了很久的人。方法论靠谱，不画饼。',
+        ctaTitle: '准备好出海了吗？🌊',
+        ctaDesc: '不管你是刚起步还是已经在路上，我们都可以聊聊。',
+        ctaBtn: '联系我们 →',
       },
       en: {
-        heroTitle: 'Global expansion needs methods, tools, and execution — not guesswork.',
-        heroDesc: 'We deliver practical playbooks across AI workflows, overseas setup and tax compliance, network technology, and cross-border e-commerce.',
-        heroBtn1: 'Explore Services',
-        heroBtn2: 'Contact Us',
-        aiTitle: 'AI Tools & Workflows',
-        aiDesc: 'From content to customer operations, automate intelligently and scale with fewer resources.',
-        taxTitle: 'Overseas Setup & Tax Filing',
-        taxDesc: 'Key guidance for entities, banking/payment setup, and tax filing to reduce compliance risks.',
-        netTitle: 'Network Technology',
-        netDesc: 'Architecture, reliability, and security practices for stable global operations.',
-        ecomTitle: 'Cross-border E-commerce',
-        ecomDesc: 'Actionable ideas in product, traffic, and fulfillment for sustainable growth.',
-        aboutTitle: 'About Us',
-        aboutDesc: 'We focus on the intersection of technology, compliance, and growth with practical execution.',
+        heroTitle: "Stop grinding. Go make money globally.",
+        heroDesc: "AI productivity, overseas company setup & tax, networking, cross-border e-commerce — we've paved the road with lessons learned. Just walk it.",
+        heroBtn1: 'Get Started →',
+        heroBtn2: "Let's Talk",
+        sectionTitle: 'What can we do for you?',
+        sectionDesc: 'Five core areas covering the most critical steps of going global.',
+        aiTitle: '🤖 AI Tools & Workflows',
+        aiDesc: 'Let AI do the heavy lifting — from content creation to customer outreach, do more with less.',
+        taxTitle: '🏦 Overseas Entity & Tax Filing',
+        taxDesc: "Company setup, bank accounts, tax compliance — don't let red tape trip you up when you should be sprinting.",
+        netTitle: '🌐 Network Technology',
+        netDesc: "Reliable networking is your lifeline abroad. Architecture, security, acceleration — you need them all.",
+        ecomTitle: '🛒 Cross-border E-commerce',
+        ecomDesc: 'Product selection, traffic, fulfillment — find a growth path that actually makes money, no guesswork.',
+        aboutTitle: '✌️ About Us',
+        aboutDesc: "A crew that's been at the crossroads of tech, tax, and growth for a while. Solid playbooks, no BS.",
+        ctaTitle: 'Ready to go global? 🌊',
+        ctaDesc: "Whether you're just starting out or already on the road, let's chat.",
+        ctaBtn: 'Contact Us →',
       },
     };
 
-    // ===== 顶部导航双语联动（你要求的点2） =====
+    // ===== 导航栏双语联动 =====
     const navDict = {
       zh: {
         '/ai-tools': 'AI工具及工作流',
@@ -125,75 +159,102 @@ const metadata = {
         '/network-tech': '网络技术',
         '/cross-border': '跨境电商',
         '/about-us': '关于我们',
+        '_action': '联系咨询',
       },
       en: {
         '/ai-tools': 'AI Tools',
         '/global-tax': 'Global Setup & Tax',
         '/network-tech': 'Network Tech',
-        '/cross-border': 'Cross-border E-commerce',
+        '/cross-border': 'Cross-border E-com',
         '/about-us': 'About Us',
+        '_action': 'Contact',
       },
     };
 
     let current = localStorage.getItem('outgopro-lang') || 'zh';
-    const btn = document.getElementById('lang-toggle');
 
     const normalizePath = (href) => {
-      try {
-        const u = new URL(href, window.location.origin);
-        return u.pathname.replace(/\/$/, '') || '/';
-      } catch {
-        return href;
-      }
+      try { return new URL(href, location.origin).pathname.replace(/\/$/, '') || '/'; }
+      catch { return href; }
+    };
+
+    // 在 header 右侧注入语言切换按钮（不占首页空间）
+    const injectLangBtn = () => {
+      if (document.getElementById('nav-lang-toggle')) return;
+      // 找到 header 右侧的 actions 区域
+      const headerActions = document.querySelector('header .items-center.flex.justify-between');
+      if (!headerActions) return;
+      const btn = document.createElement('button');
+      btn.id = 'nav-lang-toggle';
+      btn.className = 'ml-2 px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors';
+      btn.type = 'button';
+      btn.textContent = current === 'zh' ? '🌐 EN' : '🌐 中文';
+      btn.addEventListener('click', () => {
+        current = current === 'zh' ? 'en' : 'zh';
+        renderAll();
+      });
+      headerActions.querySelector('.flex')?.appendChild(btn);
     };
 
     const renderNav = () => {
-      const links = document.querySelectorAll('header a[href]');
-      links.forEach((a) => {
+      document.querySelectorAll('header nav a[href]').forEach((a) => {
         const path = normalizePath(a.getAttribute('href') || '');
         if (navDict[current][path]) a.textContent = navDict[current][path];
       });
+      // 更新 action 按钮文案
+      const actionBtns = document.querySelectorAll('header .ml-4 a, header .ml-4 button');
+      actionBtns.forEach(b => { if (navDict[current]['_action']) b.textContent = navDict[current]['_action']; });
+      // 更新语言按钮自身
+      const langBtn = document.getElementById('nav-lang-toggle');
+      if (langBtn) langBtn.textContent = current === 'zh' ? '🌐 EN' : '🌐 中文';
     };
 
     const renderPage = () => {
       document.querySelectorAll('[data-i18n]').forEach((el) => {
         const key = el.getAttribute('data-i18n');
-        if (key && dict[current][key]) el.textContent = dict[current][key];
+        if (key && dict[current]?.[key]) {
+          // 保留 emoji 前的 span 子元素（卡片 emoji 是独立 span，不受影响）
+          el.textContent = dict[current][key];
+        }
       });
-      btn.textContent = current === 'zh' ? 'EN' : '中文';
       document.documentElement.lang = current === 'zh' ? 'zh-CN' : 'en';
-      renderNav();
       localStorage.setItem('outgopro-lang', current);
     };
 
-    btn?.addEventListener('click', () => {
-      current = current === 'zh' ? 'en' : 'zh';
-      renderPage();
-    });
+    const renderAll = () => { renderPage(); renderNav(); };
 
-    renderPage();
+    // 初始化
+    injectLangBtn();
+    renderAll();
+
+    // 兼容 Astro View Transitions：页面切换后重新注入
+    document.addEventListener('astro:after-swap', () => { injectLangBtn(); renderAll(); });
   </script>
 
   <style>
     .card-link {
       display: block;
       border-radius: 1rem;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 1.25rem;
-      background: rgba(255, 255, 255, 0.85);
-      transition: all 0.2s ease;
-      backdrop-filter: blur(3px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.9);
+      transition: all 0.25s ease;
     }
 
     :global(.dark) .card-link {
-      background: rgba(15, 23, 42, 0.85);
-      border-color: rgba(100, 116, 139, 0.55);
+      background: rgba(15, 23, 42, 0.7);
+      border-color: rgba(100, 116, 139, 0.4);
     }
 
     .card-link:hover {
-      transform: translateY(-3px);
-      border-color: rgba(59, 130, 246, 0.6);
-      box-shadow: 0 12px 32px rgba(2, 6, 23, 0.08);
+      transform: translateY(-4px);
+      border-color: rgba(59, 130, 246, 0.5);
+      box-shadow: 0 16px 40px -8px rgba(2, 6, 23, 0.1);
+    }
+
+    :global(.dark) .card-link:hover {
+      box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.4);
+      border-color: rgba(96, 165, 250, 0.5);
     }
   </style>
 </Layout>
