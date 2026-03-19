@@ -1,17 +1,102 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = { title: 'Web3 & 区块链 / Web3 & Blockchain' };
+const metadata = { title: 'Web3 & 区块链 — OUTGOPRO' };
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-    <h1 class="text-4xl font-bold mb-4">Web3 & 区块链 / Web3 & Blockchain</h1>
-    <p class="text-gray-600 dark:text-gray-300 mb-8">
-      从 DeFi 到 NFT，从钱包到智能合约——帮你看懂链上世界，找到 Web3 出海的正确姿势。
-      <br />
-      From DeFi to NFTs, wallets to smart contracts — understand the on-chain world and find the right way to go global with Web3.
-    </p>
-    <a href="/" class="text-blue-600 font-semibold hover:underline">← 返回首页 / Back to Home</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden page-hero">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="page-orb page-orb-indigo"></div>
+      <div class="page-orb page-orb-blue"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
+      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 border border-indigo-400/20 mb-6">⛓️ WEB3</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        <span class="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">下一代互联网，已经开始了。</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">这不是炒币指南。这是关于去中心化技术如何重塑全球商业——支付、资产、身份、组织方式。</p>
+    </div>
   </section>
+
+  <!-- 内容区 -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="space-y-20">
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">💰</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">去中心化金融。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          不需要银行的金融服务。借贷、交易、理财——链上完成，全球通用，24 小时不打烊。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🎨</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">数字所有权。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          艺术、会员、门票、游戏资产——当所有权可以被证明和转移，一切都不一样了。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🏛️</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">链上组织。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          没有 CEO 的公司。代码即规则，持有者即决策者。这不是乌托邦，是正在运行的组织形态。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">💸</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">跨境支付，重新定义。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          秒级到账，极低手续费，无额度限制。当传统汇款还在等 3-5 个工作日的时候，链上转账已经完成了。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">⚖️</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">合规，是通行证不是绊脚石。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          不同司法辖区对数字资产的态度截然不同。有的拥抱，有的观望，有的禁止。我们帮你看清楚规则，找到能走通的路。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🧱</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">新基础设施。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          去中心化存储、去中心化网络、去中心化计算——物理世界的基础设施正在被代币经济重新组织。这不是未来，是正在发生的现在。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta-indigo">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">想了解 Web3 能为你做什么？</h2>
+      <p class="text-indigo-100 mb-8">不管你是想探索还是已经在链上，聊聊。</p>
+      <a href="/about-us" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-indigo-700 font-bold hover:bg-indigo-50 hover:-translate-y-0.5 transition-all duration-300">联系我们 →</a>
+    </div>
+  </section>
+
+  <style>
+    .page-hero { background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 40%, #f0f4ff 100%); }
+    :global(.dark) .page-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%); }
+    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
+    :global(.dark) .page-orb { opacity: 0.1; }
+    .page-orb-indigo { width: 500px; height: 500px; background: radial-gradient(circle, #6366f1, transparent 70%); top: -150px; right: -100px; }
+    .page-orb-blue { width: 400px; height: 400px; background: radial-gradient(circle, #3b82f6, transparent 70%); bottom: -100px; left: -80px; }
+    .content-block { max-width: 640px; }
+    .content-block:nth-child(even) { margin-left: auto; text-align: right; }
+    .content-block:nth-child(even) .content-icon { margin-left: auto; }
+    .content-icon { width: 3rem; height: 3rem; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .page-cta-indigo { background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%); }
+    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </Layout>

@@ -1,17 +1,137 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = { title: '关于我们 / About Us' };
+const metadata = { title: '关于我们 — OUTGOPRO' };
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-    <h1 class="text-4xl font-bold mb-4">关于我们 / About Us</h1>
-    <p class="text-gray-600 dark:text-gray-300 mb-8">
-      这里可补充团队介绍、服务边界、合作方式与联系方式。
-      <br />
-      This page can include team profile, service scope, engagement model, and contact details.
-    </p>
-    <a href="/" class="text-blue-600 font-semibold hover:underline">← 返回首页 / Back to Home</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden page-hero">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="page-orb page-orb-pink"></div>
+      <div class="page-orb page-orb-rose"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
+      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-pink-500/10 text-pink-600 dark:text-pink-300 border border-pink-400/20 mb-6">✌️ ABOUT US</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        <span class="bg-gradient-to-r from-pink-600 to-rose-500 bg-clip-text text-transparent">在交叉路口，蹲了很久的人。</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">技术、财税、商业增长。我们刚好在这三个领域都交过学费。</p>
+    </div>
   </section>
+
+  <!-- 内容区 -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="space-y-20">
+
+      <!-- 我们相信 -->
+      <div class="animate-fade-in-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">我们相信</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="belief-card">
+            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">信息差是最贵的成本。<br/><span class="text-slate-400 dark:text-slate-500">别人踩过的坑，你不该再踩。</span></p>
+          </div>
+          <div class="belief-card">
+            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">工具服务于人。<br/><span class="text-slate-400 dark:text-slate-500">能自动化的绝不手动。</span></p>
+          </div>
+          <div class="belief-card">
+            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">合规不是负担，是护城河。<br/><span class="text-slate-400 dark:text-slate-500">跑得快还得跑得稳。</span></p>
+          </div>
+          <div class="belief-card">
+            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">免费的东西最贵。<br/><span class="text-slate-400 dark:text-slate-500">我们推荐性价比最高的，不是最便宜的。</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 合作 -->
+      <div class="animate-fade-in-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">合作</h2>
+        <div class="space-y-6">
+          <div class="collab-item">
+            <div class="collab-icon">📝</div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">内容共创</h3>
+              <p class="text-slate-500 dark:text-slate-400">你有实战经验？来聊。帮你触达更多出海人。</p>
+            </div>
+          </div>
+          <div class="collab-item">
+            <div class="collab-icon">🔧</div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">工具合作</h3>
+              <p class="text-slate-500 dark:text-slate-400">你做了好用的产品？我们帮你对接对的人。</p>
+            </div>
+          </div>
+          <div class="collab-item">
+            <div class="collab-icon">💬</div>
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">咨询服务</h3>
+              <p class="text-slate-500 dark:text-slate-400">公司设立、税务规划、技术选型——预约一次，聊透。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 联系方式 -->
+      <div class="animate-fade-in-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">找到我们</h2>
+        <div class="contact-card">
+          <div class="space-y-4 text-lg">
+            <p class="flex items-center gap-3">
+              <span class="text-2xl">📧</span>
+              <a href="mailto:admin@outgopro.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@outgopro.com</a>
+            </p>
+            <p class="text-slate-400 dark:text-slate-500 text-base">微信、社交媒体——选你顺手的方式。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <style>
+    .page-hero { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 40%, #fff1f2 100%); }
+    :global(.dark) .page-hero { background: linear-gradient(135deg, #0f172a 0%, #3b0a2a 50%, #0f172a 100%); }
+    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
+    :global(.dark) .page-orb { opacity: 0.1; }
+    .page-orb-pink { width: 500px; height: 500px; background: radial-gradient(circle, #ec4899, transparent 70%); top: -150px; right: -100px; }
+    .page-orb-rose { width: 400px; height: 400px; background: radial-gradient(circle, #f43f5e, transparent 70%); bottom: -100px; left: -80px; }
+
+    .belief-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148,163,184,0.15);
+    }
+    :global(.dark) .belief-card {
+      background: rgba(15,23,42,0.5);
+      border-color: rgba(100,116,139,0.25);
+    }
+
+    .collab-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      border-radius: 1rem;
+      transition: background 0.2s;
+    }
+    .collab-item:hover { background: rgba(148,163,184,0.06); }
+    .collab-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.125rem; }
+
+    .contact-card {
+      padding: 2rem;
+      border-radius: 1.25rem;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148,163,184,0.15);
+    }
+    :global(.dark) .contact-card {
+      background: rgba(15,23,42,0.5);
+      border-color: rgba(100,116,139,0.25);
+    }
+
+    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </Layout>

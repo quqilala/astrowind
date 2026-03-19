@@ -1,17 +1,86 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = { title: '网络技术 / Network Tech' };
+const metadata = { title: '网络技术 — OUTGOPRO' };
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-    <h1 class="text-4xl font-bold mb-4">网络技术 / Network Tech</h1>
-    <p class="text-gray-600 dark:text-gray-300 mb-8">
-      这里可补充网络架构、可用性、安全策略、运维规范等技术实践内容。
-      <br />
-      Expand with architecture, reliability, security, and infrastructure operation practices.
-    </p>
-    <a href="/" class="text-blue-600 font-semibold hover:underline">← 返回首页 / Back to Home</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden page-hero">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="page-orb page-orb-violet"></div>
+      <div class="page-orb page-orb-indigo"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
+      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-violet-500/10 text-violet-600 dark:text-violet-300 border border-violet-400/20 mb-6">🌐 NETWORK</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        <span class="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">连接，是一切的前提。</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">网站、支付、客服、协同——你的整个业务跑在网络上。这块不是成本，是地基。</p>
+    </div>
   </section>
+
+  <!-- 内容区 -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="space-y-20">
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🏗️</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">部署，零运维。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          全球分发，自动扩容，按使用量计费。你不需要懂服务器，也不需要养运维。选对架构，上线就是终态。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🔒</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">安全，不是选项。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          加密传输、攻击防护、入侵检测、密钥管理。这些不是「以后再说」的东西，是第一天就该有的基础。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">⚡</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">速度，就是体验。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          图片秒加载，页面即开即用，全球任何角落都一样快。用户不会等你，搜索引擎也不会。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">📡</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">监控，防患于未然。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          你的服务挂了 3 分钟，你应该在第 1 秒就知道。自动告警、日志追踪、性能分析——让问题在变成事故之前被解决。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta-violet">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">网络架构需要升级？</h2>
+      <p class="text-violet-100 mb-8">告诉我们你的现状，帮你规划最稳的方案。</p>
+      <a href="/about-us" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-violet-700 font-bold hover:bg-violet-50 hover:-translate-y-0.5 transition-all duration-300">联系我们 →</a>
+    </div>
+  </section>
+
+  <style>
+    .page-hero { background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 40%, #f0f4ff 100%); }
+    :global(.dark) .page-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1040 50%, #0f172a 100%); }
+    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
+    :global(.dark) .page-orb { opacity: 0.1; }
+    .page-orb-violet { width: 500px; height: 500px; background: radial-gradient(circle, #8b5cf6, transparent 70%); top: -150px; right: -100px; }
+    .page-orb-indigo { width: 400px; height: 400px; background: radial-gradient(circle, #6366f1, transparent 70%); bottom: -100px; left: -80px; }
+    .content-block { max-width: 640px; }
+    .content-block:nth-child(even) { margin-left: auto; text-align: right; }
+    .content-block:nth-child(even) .content-icon { margin-left: auto; }
+    .content-icon { width: 3rem; height: 3rem; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .page-cta-violet { background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%); }
+    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </Layout>

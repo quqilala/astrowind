@@ -1,17 +1,88 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = { title: '海外公司/账户设立报税 / Global Setup & Tax' };
+const metadata = { title: '海外公司 / 账户设立报税 — OUTGOPRO' };
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-    <h1 class="text-4xl font-bold mb-4">海外公司/账户设立报税 / Global Setup & Tax</h1>
-    <p class="text-gray-600 dark:text-gray-300 mb-8">
-      这里可补充各司法辖区设立、账户开设、税务合规与申报节奏的详细内容。
-      <br />
-      Add jurisdiction setup, account opening process, and tax compliance/timeline details here.
-    </p>
-    <a href="/" class="text-blue-600 font-semibold hover:underline">← 返回首页 / Back to Home</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden page-hero">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="page-orb page-orb-green"></div>
+      <div class="page-orb page-orb-teal"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
+      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-300 border border-emerald-400/20 mb-6">🏦 GLOBAL SETUP</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        <span class="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">给你的业务，一个全球通行证。</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">出海不是把东西卖出去就行。你需要一个合法身份，一个能收钱的账户，一套不会让你半夜惊醒的税务方案。</p>
+    </div>
   </section>
+
+  <!-- 内容区 -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="space-y-20">
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🌍</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">选对地方，少走三年弯路。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          美洲、亚太、欧洲——每个司法辖区都有自己的脾气。税率、维护成本、开户难度、适合的业务类型，我们帮你一张表看清楚。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🏧</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">开户，不再是玄学。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          线上开户、远程审核、材料清单、常见拒绝理由——我们把流程拆到最细，你照着走就行。关键在于一件事：证明你真的在做生意。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">📅</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">报税，按节奏来。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          每个地方的申报窗口不一样。我们给你一条时间线，该准备什么、什么时候交、交给谁——清清楚楚，不会漏。
+        </p>
+      </div>
+
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">❓</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">常见疑问</h2>
+        <div class="space-y-6 text-lg text-slate-500 dark:text-slate-400 leading-relaxed">
+          <p><span class="text-slate-700 dark:text-slate-200 font-medium">人在国内，能远程注册吗？</span><br/>大多数情况下，可以。</p>
+          <p><span class="text-slate-700 dark:text-slate-200 font-medium">海外收入要在国内交税吗？</span><br/>取决于实际管理地。简单说：该问的别省。</p>
+          <p><span class="text-slate-700 dark:text-slate-200 font-medium">需要当地地址吗？</span><br/>需要，但不一定需要你亲自去。</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta-green">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">准备给业务安个家？</h2>
+      <p class="text-emerald-100 mb-8">告诉我们你的业务方向，帮你找到最合适的方案。</p>
+      <a href="/about-us" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-emerald-700 font-bold hover:bg-emerald-50 hover:-translate-y-0.5 transition-all duration-300">联系我们 →</a>
+    </div>
+  </section>
+
+  <style>
+    .page-hero { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 40%, #f0fdf4 100%); }
+    :global(.dark) .page-hero { background: linear-gradient(135deg, #0f172a 0%, #052e16 50%, #0f172a 100%); }
+    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
+    :global(.dark) .page-orb { opacity: 0.1; }
+    .page-orb-green { width: 500px; height: 500px; background: radial-gradient(circle, #10b981, transparent 70%); top: -150px; right: -100px; }
+    .page-orb-teal { width: 400px; height: 400px; background: radial-gradient(circle, #14b8a6, transparent 70%); bottom: -100px; left: -80px; }
+    .content-block { max-width: 640px; }
+    .content-block:nth-child(even) { margin-left: auto; text-align: right; }
+    .content-block:nth-child(even) .content-icon { margin-left: auto; }
+    .content-icon { width: 3rem; height: 3rem; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .page-cta-green { background: linear-gradient(135deg, #059669 0%, #0d9488 100%); }
+    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </Layout>

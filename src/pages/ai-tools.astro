@@ -1,17 +1,106 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = { title: 'AI工具及工作流 / AI Tools & Workflows' };
+const metadata = { title: 'AI 工具及工作流 — OUTGOPRO' };
 ---
 
 <Layout metadata={metadata}>
-  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-14">
-    <h1 class="text-4xl font-bold mb-4">AI工具及工作流 / AI Tools & Workflows</h1>
-    <p class="text-gray-600 dark:text-gray-300 mb-8">
-      这里是后续扩展页面。你可以在此补充 AI 工具清单、自动化流程、案例与交付模板。
-      <br />
-      This page is ready for future expansion: tool stack, workflows, case studies, and templates.
-    </p>
-    <a href="/" class="text-blue-600 font-semibold hover:underline">← 返回首页 / Back to Home</a>
+  <!-- Hero -->
+  <section class="relative overflow-hidden page-hero">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="page-orb page-orb-blue"></div>
+      <div class="page-orb page-orb-purple"></div>
+    </div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
+      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-blue-500/10 text-blue-600 dark:text-blue-300 border border-blue-400/20 mb-6">🤖 AI TOOLS</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
+        <span class="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">更少的人，更大的事。</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">当别人还在招人的时候，你的团队已经在用 AI 完成十倍的工作量。</p>
+    </div>
   </section>
+
+  <!-- 内容区 -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
+    <div class="space-y-20">
+
+      <!-- 内容规模化 -->
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">📝</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">内容，规模化。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          一次输入，多语言输出。从营销文案到产品描述，从短视频脚本到深度长文——你只需要提供方向，剩下的交给机器。
+        </p>
+      </div>
+
+      <!-- 设计 -->
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🎨</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">设计，无需设计师。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          产品图、广告素材、社媒配图。输入一句话，输出可以直接用的视觉内容。不需要打开专业软件，不需要等排期。
+        </p>
+      </div>
+
+      <!-- 数据 -->
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">📊</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">数据，自己会说话。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          把数据丢进去，洞察自己浮出来。用户行为、流量归因、转化漏斗——不再需要专人盯着看板。
+        </p>
+      </div>
+
+      <!-- 客户 -->
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">🤝</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">客户，7×24 在线。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          多语种自动应答，智能邮件序列，全球时区无缝覆盖。你的客户不知道在和 AI 对话，但他们会记住你的响应速度。
+        </p>
+      </div>
+
+      <!-- 从 0 到上线 -->
+      <div class="content-block animate-fade-in-up">
+        <div class="content-icon">⚡</div>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">从 0 到上线，30 分钟。</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+          AI 写代码，自动部署，全球加速。你的下一个产品，可能在午饭前就上线了。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16 md:py-20 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">想知道 AI 能为你的业务做什么？</h2>
+      <p class="text-blue-100 mb-8">聊聊你的场景，我们帮你找到最高效的方案。</p>
+      <a href="/about-us" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-blue-700 font-bold hover:bg-blue-50 hover:-translate-y-0.5 transition-all duration-300">联系我们 →</a>
+    </div>
+  </section>
+
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 40%, #f5f0ff 100%);
+    }
+    :global(.dark) .page-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #0c1929 50%, #1a1040 100%);
+    }
+    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
+    :global(.dark) .page-orb { opacity: 0.1; }
+    .page-orb-blue { width: 500px; height: 500px; background: radial-gradient(circle, #3b82f6, transparent 70%); top: -150px; right: -100px; }
+    .page-orb-purple { width: 400px; height: 400px; background: radial-gradient(circle, #8b5cf6, transparent 70%); bottom: -100px; left: -80px; }
+
+    .content-block { max-width: 640px; }
+    .content-block:nth-child(even) { margin-left: auto; text-align: right; }
+    .content-block:nth-child(even) .content-icon { margin-left: auto; }
+    .content-icon { width: 3rem; height: 3rem; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+
+    .page-cta { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); }
+
+    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </Layout>
