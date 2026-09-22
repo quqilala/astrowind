@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'OUTGOPRO - 走，出海去！'
+    default: 'OUTGOPRO — 好生意，从这里开始。'
     template: '%s — OUTGOPRO'
-  description: "\U0001F680 专注为中国企业和独立开发者提供出海合规、支付、营销的一站式资源导航"
+  description: '网站建设、国内与海外公司注册报税、商标注册、VPN 与企业网络、AI 模型聚合 API。让你的下一步，更清楚。'
   robots:
     index: true
     follow: true
@@ -23,8 +23,8 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:

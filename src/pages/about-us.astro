@@ -1,137 +1,91 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
-const metadata = { title: '关于我们 — OUTGOPRO' };
+import Layout from '~/layouts/OutgoLayout.astro';
+import { email, services } from '~/data/services';
 ---
 
-<Layout metadata={metadata}>
-  <!-- Hero -->
-  <section class="relative overflow-hidden page-hero">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="page-orb page-orb-pink"></div>
-      <div class="page-orb page-orb-rose"></div>
-    </div>
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20 text-center">
-      <div class="inline-flex items-center gap-2 text-xs tracking-widest font-bold uppercase rounded-full px-4 py-2 bg-pink-500/10 text-pink-600 dark:text-pink-300 border border-pink-400/20 mb-6">✌️ ABOUT US</div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6">
-        <span class="bg-gradient-to-r from-pink-600 to-rose-500 bg-clip-text text-transparent">在交叉路口，蹲了很久的人。</span>
-      </h1>
-      <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">技术、财税、商业增长。我们刚好在这三个领域都交过学费。</p>
+<Layout
+  title="关于我们 — 让你的下一步，更清楚。"
+  description="OUTGOPRO 提供网站建设、公司注册与报税、商标注册、VPN 与企业网络、AI 聚合 API 服务。从你的实际业务出发，明确方案与交付。"
+>
+  <section class="about-hero container">
+    <p class="eyebrow"><span class="orange-dot"></span> ABOUT OUTGOPRO</p><h1>
+      你专注生意。<br /><span class="accent">我们理顺复杂。</span>
+    </h1><p class="lead">
+      一个网站，一家公司，一个品牌。<br />每一次开始，都有许多具体的事要做。<br />我们把它们变得更有条理。
+    </p>
+  </section>
+  <section class="about-values container">
+    <div><p class="eyebrow">OUR APPROACH</p><h2>说清楚。<br />做扎实。</h2></div><div>
+      {
+        [
+          ['从真实需求出发', '先了解你当前的业务和下一步计划，再讨论需要哪些服务，以及如何推进。'],
+          ['让范围看得见', '服务内容、费用、交付和协作方式，在开始前讲清楚。让双方都知道要完成什么。'],
+          ['让合作有连续性', '把资料和过程整理好，完成交接。需要持续协作的部分，按实际需求安排。'],
+        ].map(([title, text]) => (
+          <article>
+            <>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </>
+          </article>
+        ))
+      }
     </div>
   </section>
-
-  <!-- 内容区 -->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-16 md:py-24">
-    <div class="space-y-20">
-
-      <!-- 我们相信 -->
-      <div class="animate-fade-in-up">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">我们相信</h2>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div class="belief-card">
-            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">信息差是最贵的成本。<br/><span class="text-slate-400 dark:text-slate-500">别人踩过的坑，你不该再踩。</span></p>
-          </div>
-          <div class="belief-card">
-            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">工具服务于人。<br/><span class="text-slate-400 dark:text-slate-500">能自动化的绝不手动。</span></p>
-          </div>
-          <div class="belief-card">
-            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">合规不是负担，是护城河。<br/><span class="text-slate-400 dark:text-slate-500">跑得快还得跑得稳。</span></p>
-          </div>
-          <div class="belief-card">
-            <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed">免费的东西最贵。<br/><span class="text-slate-400 dark:text-slate-500">我们推荐性价比最高的，不是最便宜的。</span></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 合作 -->
-      <div class="animate-fade-in-up">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">合作</h2>
-        <div class="space-y-6">
-          <div class="collab-item">
-            <div class="collab-icon">📝</div>
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">内容共创</h3>
-              <p class="text-slate-500 dark:text-slate-400">你有实战经验？来聊。帮你触达更多出海人。</p>
-            </div>
-          </div>
-          <div class="collab-item">
-            <div class="collab-icon">🔧</div>
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">工具合作</h3>
-              <p class="text-slate-500 dark:text-slate-400">你做了好用的产品？我们帮你对接对的人。</p>
-            </div>
-          </div>
-          <div class="collab-item">
-            <div class="collab-icon">💬</div>
-            <div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">咨询服务</h3>
-              <p class="text-slate-500 dark:text-slate-400">公司设立、税务规划、技术选型——预约一次，聊透。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 联系方式 -->
-      <div class="animate-fade-in-up">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-8">找到我们</h2>
-        <div class="contact-card">
-          <div class="space-y-4 text-lg">
-            <p class="flex items-center gap-3">
-              <span class="text-2xl">📧</span>
-              <a href="mailto:admin@outgopro.com" class="text-blue-600 dark:text-blue-400 hover:underline">admin@outgopro.com</a>
-            </p>
-            <p class="text-slate-400 dark:text-slate-500 text-base">微信、社交媒体——选你顺手的方式。</p>
-          </div>
-        </div>
-      </div>
-
+  <section id="contact" class="contact-page">
+    <div class="container contact-page-grid">
+      <div>
+        <p class="eyebrow">LET’S TALK</p><h2>你的计划，<br />我们愿意听。</h2><p>
+          选择想了解的服务，发送一封邮件。<br />不必措辞完美，把事情说清楚就好。
+        </p><a class="email-large" href={`mailto:${email}`}>{email} ↗</a>
+      </div><form id="inquiry-form">
+        <label for="service">你想了解什么？</label><select id="service" name="service"
+          >{services.map((service) => <option>{service.name}</option>)}<option>多项服务 / 还没想好</option></select
+        ><label for="message">简单说说你的计划</label><textarea
+          id="message"
+          name="message"
+          rows="4"
+          maxlength="2000"
+          placeholder="例如：想做一个面向海外客户的企业官网，目前已有品牌资料……"
+          required></textarea><label for="contact-detail">方便联系的方式（选填）</label><input
+          id="contact-detail"
+          name="contact"
+          maxlength="200"
+          placeholder="邮箱、电话或微信"
+        /><button type="submit" class="button">用邮件发送咨询 <span aria-hidden="true">↗</span></button><p
+          class="form-note"
+        >
+          将打开你的邮件应用，由你确认发送。网页不会提交或保存表单内容。
+        </p><p id="form-status" role="status"></p><button id="copy-inquiry" type="button" class="text-link"
+          >没有邮件应用？复制咨询内容</button
+        >
+      </form>
     </div>
   </section>
-
-  <style>
-    .page-hero { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 40%, #fff1f2 100%); }
-    :global(.dark) .page-hero { background: linear-gradient(135deg, #0f172a 0%, #3b0a2a 50%, #0f172a 100%); }
-    .page-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.3; }
-    :global(.dark) .page-orb { opacity: 0.1; }
-    .page-orb-pink { width: 500px; height: 500px; background: radial-gradient(circle, #ec4899, transparent 70%); top: -150px; right: -100px; }
-    .page-orb-rose { width: 400px; height: 400px; background: radial-gradient(circle, #f43f5e, transparent 70%); bottom: -100px; left: -80px; }
-
-    .belief-card {
-      padding: 1.5rem;
-      border-radius: 1rem;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(148,163,184,0.15);
+  <script>
+    const form = document.querySelector<HTMLFormElement>('#inquiry-form');
+    const status = document.querySelector<HTMLElement>('#form-status');
+    function inquiry() {
+      const data = new FormData(form!);
+      return {
+        subject: `OUTGOPRO · ${data.get('service')}`,
+        body: `你好，OUTGOPRO：\n\n咨询服务：${data.get('service')}\n\n我的计划：\n${data.get('message')}\n\n联系方式：${data.get('contact') || '请回复本邮件'}`,
+      };
     }
-    :global(.dark) .belief-card {
-      background: rgba(15,23,42,0.5);
-      border-color: rgba(100,116,139,0.25);
-    }
-
-    .collab-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.25rem;
-      border-radius: 1rem;
-      transition: background 0.2s;
-    }
-    .collab-item:hover { background: rgba(148,163,184,0.06); }
-    .collab-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.125rem; }
-
-    .contact-card {
-      padding: 2rem;
-      border-radius: 1.25rem;
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(148,163,184,0.15);
-    }
-    :global(.dark) .contact-card {
-      background: rgba(15,23,42,0.5);
-      border-color: rgba(100,116,139,0.25);
-    }
-
-    .animate-fade-in-up { animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  </style>
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const { subject, body } = inquiry();
+      window.location.href = `mailto:admin@outgopro.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (status) status.textContent = '请在邮件应用中确认发送；若未打开，可复制内容后手动发至 admin@outgopro.com。';
+    });
+    document.querySelector('#copy-inquiry')?.addEventListener('click', async () => {
+      const { subject, body } = inquiry();
+      try {
+        await navigator.clipboard.writeText(`收件人：admin@outgopro.com\n主题：${subject}\n\n${body}`);
+        if (status) status.textContent = '已复制。请粘贴到邮件，发送至 admin@outgopro.com。';
+      } catch {
+        if (status) status.textContent = '浏览器暂不支持自动复制。请手动复制输入内容，发送至 admin@outgopro.com。';
+      }
+    });
+  </script>
 </Layout>

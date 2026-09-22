@@ -28,7 +28,9 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) => !['/ai-tools', '/cross-border', '/web3'].includes(new URL(page).pathname.replace(/\/$/, '')),
+    }),
     mdx(),
     icon({
       include: {

@@ -1,4 +1,12 @@
-# 🚀 AstroWind
+# OUTGOPRO
+
+官网：[outgopro.com](https://outgopro.com)。提供网站建设、国内与海外公司注册报税、商标注册、VPN 与企业网络，以及 AI 模型聚合 API 服务。
+
+项目维护与部署见 [DEPLOYMENT.md](DEPLOYMENT.md)，视觉及内容规范见 [DESIGN.md](DESIGN.md)。
+
+以下保留项目所使用的 AstroWind 模板文档与来源说明。
+
+# AstroWind
 
 <img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
      alt="AstroWind Lighthouse Score" width="100" height="358">
