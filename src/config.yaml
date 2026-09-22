@@ -11,7 +11,7 @@ metadata:
   title:
     default: 'OUTGOPRO — 好生意，从这里开始。'
     template: '%s — OUTGOPRO'
-  description: '网站建设、国内与海外公司注册报税、商标注册、VPN 与企业网络、AI 模型聚合 API。让你的下一步，更清楚。'
+  description: '网站建设、国内与海外公司注册报税、商标注册、VPS 与 Cloudflare 云部署、WireGuard 线上办公室、AI Agent 模型 API 接入。让你的下一步，更清楚。'
   robots:
     index: true
     follow: true

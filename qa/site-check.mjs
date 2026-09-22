@@ -73,7 +73,7 @@ for (const width of [1440, 390]) {
       }
       if (route === '/about-us') {
         assert.equal(await page.locator('#service option').count(), 7);
-        await page.locator('#service').selectOption({ label: 'AI 模型聚合 API' });
+        await page.locator('#service').selectOption({ label: 'AI Agent' });
         await page.locator('#message').fill('测试咨询内容，不发送。');
         await page.evaluate(() => {
           Object.defineProperty(navigator, 'clipboard', {
@@ -87,7 +87,7 @@ for (const width of [1440, 390]) {
         });
         await page.locator('#copy-inquiry').click();
         const copied = await page.evaluate(() => window.__copiedInquiry);
-        assert.ok(copied.includes('AI 模型聚合 API') && copied.includes('admin@outgopro.com'));
+        assert.ok(copied.includes('AI Agent') && copied.includes('admin@outgopro.com'));
         assert.ok((await page.locator('#form-status').innerText()).includes('已复制'));
       }
       assert.equal(errors.length, 0, errors.join('\n'));

@@ -1,6 +1,6 @@
 # OUTGOPRO
 
-官网：[outgopro.com](https://outgopro.com)。提供网站建设、国内与海外公司注册报税、商标注册、VPN 与企业网络，以及 AI 模型聚合 API 服务。
+官网：[outgopro.com](https://outgopro.com)。提供网站建设、国内与海外公司注册报税、商标注册、云部署与企业网络，以及面向 AI Agent 用户的模型 API 中转接入服务。网络业务包括 VPS、Cloudflare 部署及基于 WireGuard 的线上办公室。
 
 项目维护与部署见 [DEPLOYMENT.md](DEPLOYMENT.md)，视觉及内容规范见 [DESIGN.md](DESIGN.md)。
 
